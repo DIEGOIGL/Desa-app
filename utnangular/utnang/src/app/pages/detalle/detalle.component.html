@@ -1,0 +1,16 @@
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="!loading">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{producto.name | uppercase}}</mat-card-title>
+          <mat-card-subtitle>{{producto.price | currency}} </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{producto.photo_url}} alt="Producto">
+        <mat-card-content>
+          <p>{{producto.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" routerLink="/">ATRAS</button>
+        </mat-card-actions>
+      </mat-card>
+</div>
