@@ -1,0 +1,75 @@
+--------------- CATEGORIA  ------------------------
+
+POST http://localhost:3000/categories/
+{
+    "category" : "CATEGORIA 1"
+}
+---------------------------------------------------
+GET http://localhost:3000/categories/
+---------------------------------------------------
+
+--------------- USER ------------------------------
+
+POST http://localhost:3000/users/create/
+{
+    "name":"USERNAME",
+    "pass":"Ab123456$",
+    "email":"user@gmail.com",
+    "surname":"USERSURNAME",
+    "alias":"AKA"
+}
+---------------------------------------------------
+POST http://localhost:3000/users/login/
+{
+    "pass":"Ab123456$",
+    "email":"user@gmail.com"
+}
+---------------------------------------------------
+PUT http://localhost:3000/users/(_id)
+[REQUIERE x-access-token en el Header]
+{
+    "name":"CHANGENAME",
+    "pass":"Ab123456$",
+    "email":"user@gmail.com",
+    "surname":"USERSURNAME",
+    "alias":"AKA"
+}
+---------------------------------------------------
+DELETE http://localhost:3000/users/(_id)
+[REQUIERE x-access-token en el Header]
+---------------------------------------------------
+
+--------------- PRODUCTO --------------------------
+
+GET http://localhost:3000/productos/all
+---------------------------------------------------
+GET http://localhost:3000/productos/onlyfeat
+---------------------------------------------------
+GET http://localhost:3000/productos/(_id)
+---------------------------------------------------
+DELETE http://localhost:3000/productos/(_id)
+[REQUIERE x-access-token en el Header]
+---------------------------------------------------
+POST http://localhost:3000/productos/
+[REQUIERE x-access-token en el Header]
+{
+    "name":"Producto 1",
+    "sku":9084357464335,
+    "description":"Esta es la descripcion del Producto 1",
+    "price":200,
+    "feat":true,
+    "idCategory":[REQUIERE ID CATEGORIA]
+}
+---------------------------------------------------
+PUT http://localhost:3000/productos/(_id)
+[REQUIERE x-access-token en el Header]
+{
+    "name":"Producto 1",
+    "sku":123456789,
+    "description":"El producto 1 es una belleza",
+    "price":1540,
+    "feat":true,
+    "idCategory":[REQUIERE ID CATEGORIA]
+}
+---------------------------------------------------
+

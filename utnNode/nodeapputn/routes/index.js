@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send("HOLA MUNDO BRAZUCA REPUTO");
+  res.send("HOLA MUNDO");
 });
 
 module.exports = router;
