@@ -1,12 +1,13 @@
 {
-	"folders": [
-		{
-			"path": "nodeapputn"
-		}
-	],
-	"settings": {
-		"githubPullRequests.remotes": [
-			"UtnAngular"
-		]
-	}
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "../utnangular"
+        },
+        {
+            "path": "../utnreact"
+        }
+    ]
 }
